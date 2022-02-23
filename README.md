@@ -16,7 +16,7 @@ rm -rf initrd.gz initrd
 ```
 To install Jessie, it's needed retrieving from the host archive.debian.org
 
-##Troubleshotting
+## Troubleshotting
 At moment asked for kernel installation, choose "none"
 Then, open the shell and do as follows:
 ```sh
@@ -36,3 +36,4 @@ apt-get update
 apt-get install flash-kernel
 apt-get install u-boot-tools
 apt-get install --reinstall linux-image-3.2.0-2-kirkwood
+```
