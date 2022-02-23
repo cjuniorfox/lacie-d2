@@ -15,3 +15,24 @@ mkimage -A arm -O linux -T ramdisk -C gzip -a "0x0" -e "0x0" -n "ramdisk with pr
 rm -rf initrd.gz initrd
 ```
 To install Jessie, it's needed retrieving from the host archive.debian.org
+
+##Troubleshotting
+At moment asked for kernel installation, choose "none"
+Then, open the shell and do as follows:
+```sh
+mount -t proc proc /target/proc/
+mount -t sysfs sysfs /target/sys/
+chroot /target /bin/bash
+
+cat >> /etc/apt/sources.list << EOF
+deb ftp://lacie-nas.org/debian/ sid main
+deb-src ftp://lacie-nas.org/debian/ sid main
+EOF
+
+gpg --keyserver pgpkeys.mit.edu --recv-key 0x0E3D4C9F7C71B58C
+gpg -a --export 0E3D4C9F7C71B58C | apt-key add -
+
+apt-get update
+apt-get install flash-kernel
+apt-get install u-boot-tools
+apt-get install --reinstall linux-image-3.2.0-2-kirkwood
