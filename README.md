@@ -36,4 +36,9 @@ apt-get update
 apt-get install flash-kernel
 apt-get install u-boot-tools
 apt-get install --reinstall linux-image-3.2.0-2-kirkwood
+
+exit
+umount /target/sys/
+umount /target/proc/
+exit
 ```
