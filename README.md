@@ -14,4 +14,4 @@ cd ..
 mkimage -A arm -O linux -T ramdisk -C gzip -a "0x0" -e "0x0" -n "ramdisk with preseed.cfg" -d initrd.gz uInitrd
 rm -rf initrd.gz initrd
 ```
-To install Jessie, it's needed to retrieve from the host archive.debian.org
+To install Jessie, it's needed retrieving from the host archive.debian.org
