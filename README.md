@@ -50,7 +50,7 @@ exit
 source: [wsdd](https://github.com/christgau/wsdd)
 
 ```sh
-echo "deb https://pkg.ltec.ch/public/ $(lsb_release -cs) main" | tee -a /etc/apt/sources.list.d/wsdd
+echo "deb https://pkg.ltec.ch/public/ $(lsb_release -cs) main" | tee -a /etc/apt/sources.list.d/wsdd.list
 
 apt-key adv --fetch-keys https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key
 
