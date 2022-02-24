@@ -31,7 +31,7 @@ EOF
 
 echo 'Dir::Bin::Methods::ftp "ftp";' | sudo tee -a /etc/apt/apt.conf.d/99local-ftp
 
-gpg --keyserver pgpkeys.mit.edu --recv-key 0x0E3D4C9F7C71B58C
+gpg --keyserver keys.openpgp.org --recv-key 0x0E3D4C9F7C71B58C
 gpg -a --export 0E3D4C9F7C71B58C | apt-key add -
 
 apt-get update
