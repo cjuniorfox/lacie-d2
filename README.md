@@ -59,3 +59,7 @@ chown nobody:nogroup /bin/wsdd
 chmod 775 /bin/wsdd
 service wsdd start
 ```
+Edit ```/etc/wsdd.conf``` as follows:
+```
+WSDD_PARAMS="--interface eno1"
+```
