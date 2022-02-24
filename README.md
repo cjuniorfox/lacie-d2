@@ -29,6 +29,8 @@ deb ftp://lacie-nas.org/debian/ sid main
 deb-src ftp://lacie-nas.org/debian/ sid main
 EOF
 
+echo 'Dir::Bin::Methods::ftp "ftp";' | sudo tee -a /etc/apt/apt.conf.d/99local-ftp
+
 gpg --keyserver pgpkeys.mit.edu --recv-key 0x0E3D4C9F7C71B58C
 gpg -a --export 0E3D4C9F7C71B58C | apt-key add -
 
@@ -36,6 +38,7 @@ apt-get update
 apt-get install flash-kernel
 apt-get install u-boot-tools
 apt-get install --reinstall linux-image-kirkwood
+
 
 exit
 umount /target/sys/
