@@ -61,5 +61,5 @@ service wsdd start
 ```
 Edit ```/etc/wsdd.conf``` as follows:
 ```
-WSDD_PARAMS="--interface eno1"
+WSDD_PARAMS="--interface eth0"
 ```
