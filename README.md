@@ -45,3 +45,17 @@ umount /target/sys/
 umount /target/proc/
 exit
 ```
+
+## Make samba shares visibles to Windows 10
+source: [wsdd](https://github.com/christgau/wsdd)
+
+```sh
+echo "deb https://pkg.ltec.ch/public/ $(lsb_release -cs) main" | tee -a /etc/apt/sources.list.d/wsdd
+
+apt-key adv --fetch-keys https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key
+
+apt update && apt install wsdd
+chown nobody:nogroup /bin/wsdd
+chmod 775 /bin/wsdd
+service wsdd start
+```
