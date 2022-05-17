@@ -2,6 +2,8 @@
 
 from [lacie-nas](http://lacie-nas.org/doku.php?id=debian_install)
 
+Do not forget to install *u-boot-tools* first.
+
 ```sh
 wget http://ftp.debian.org/debian/dists/jessie/main/installer-armel/current/images/kirkwood/network-console/lacie/uInitrd
 wget http://ftp.debian.org/debian/dists/jessie/main/installer-armel/current/images/kirkwood/network-console/lacie/d2net/uImage
